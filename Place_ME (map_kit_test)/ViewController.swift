@@ -17,6 +17,14 @@ class ViewController: UIViewController {
        
         let initialLocation = CLLocation(latitude: 50.44761935392397 , longitude: 30.522026437923916)
         mapView.centerLocation(initialLocation)
+        
+        let cameraCenter = CLLocation(latitude: 50.44761935392397, longitude: 30.522026437923916)
+        let region = MKCoordinateRegion (center: cameraCenter.coordinate, latitudinalMeters: 100000, longitudinalMeters: 100000) //100*100 kms view borders
+        mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
+        
+        let zoomRage = MKMapView.CameraZoomRange (maxCenterCoordinateDistance: 160000) //120 km max zoom range (It will be just Kyiv map)
+        mapView.setCameraZoomRange(zoomRage, animated: true)
+        
     }
 
 
