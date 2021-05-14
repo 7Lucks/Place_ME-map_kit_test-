@@ -46,8 +46,6 @@ class Places: NSObject, MKAnnotation {
         coordinate = point.coordinate
         
         super.init()
-        
-      
     }
     
     var subtitle: String?{
@@ -59,7 +57,7 @@ class Places: NSObject, MKAnnotation {
     return nil
     }
         let adressDict = [CNPostalAddressStateKey: location] //getting our point on the map
-        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: adressDict)
         
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = title
