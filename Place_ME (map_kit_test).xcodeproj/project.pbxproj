@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C8C9CC5264EC68800B298B8 /* Places.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 6C8C9CC4264EC68800B298B8 /* Places.geojson */; };
 		6CE5D06B264D7B0B009B69D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE5D06A264D7B0B009B69D6 /* AppDelegate.swift */; };
 		6CE5D06D264D7B0B009B69D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE5D06C264D7B0B009B69D6 /* SceneDelegate.swift */; };
 		6CE5D06F264D7B0B009B69D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE5D06E264D7B0B009B69D6 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C8C9CC4264EC68800B298B8 /* Places.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Places.geojson; path = ../../../Places.geojson; sourceTree = "<group>"; };
 		6CE5D067264D7B0B009B69D6 /* Place_ME (map_kit_test).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Place_ME (map_kit_test).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE5D06A264D7B0B009B69D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE5D06C264D7B0B009B69D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				6CE5D078264D7B0C009B69D6 /* LaunchScreen.storyboard */,
 				6CE5D07B264D7B0C009B69D6 /* Info.plist */,
 				6CE5D073264D7B0B009B69D6 /* Place_ME__map_kit_test_.xcdatamodeld */,
+				6C8C9CC4264EC68800B298B8 /* Places.geojson */,
 			);
 			path = "Place_ME (map_kit_test)";
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CE5D07A264D7B0C009B69D6 /* LaunchScreen.storyboard in Resources */,
+				6C8C9CC5264EC68800B298B8 /* Places.geojson in Resources */,
 				6CE5D077264D7B0C009B69D6 /* Assets.xcassets in Resources */,
 				6CE5D072264D7B0B009B69D6 /* Main.storyboard in Resources */,
 			);
