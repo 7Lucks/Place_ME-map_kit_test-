@@ -10,17 +10,16 @@ import MapKit
 import Contacts  //determining the exact location on the map
 
 class Places: NSObject, MKAnnotation {
+  let title: String?
+  let locationName: String?
+  let discipline: String?
+  let coordinate: CLLocationCoordinate2D
     
-    let title: String?
-    let locationName: String?
-    let discipline: String?
-    let coordinate: CLLocationCoordinate2D
-    
-    init (
-        title: String?,
-        locationName: String?,
-        discipline: String?,
-        coordinate: CLLocationCoordinate2D
+   init (
+    title: String?,
+    locationName: String?,
+    discipline: String?,
+    coordinate: CLLocationCoordinate2D
     ) {
         self.title = title
         self.locationName = locationName
@@ -29,7 +28,7 @@ class Places: NSObject, MKAnnotation {
         
         super.init()
     }
-    
+
     init?(feature: MKGeoJSONFeature){
         guard
             let point = feature.geometry.first as? MKPointAnnotation,
@@ -41,7 +40,7 @@ class Places: NSObject, MKAnnotation {
         }
         
         title = properties["title"] as? String
-        locationName = properties["location"] as? String
+        locationName = properties["locationName"] as? String
         discipline = properties["discipline"] as? String
         coordinate = point.coordinate
         
@@ -52,7 +51,7 @@ class Places: NSObject, MKAnnotation {
         return locationName
     }
 
-    var mapItem: MKMapItem?{
+    var mapItem: MKMapItem? {
     guard let location = locationName else {
     return nil
     }
@@ -63,5 +62,17 @@ class Places: NSObject, MKAnnotation {
         mapItem.name = title
         return mapItem
     }
+    
+    var markerTintColor: UIColor {
+        switch discipline {
+        case "Walking route": return .purple
+        case "Cathedral": return .blue
+        case "Monument": return .yellow
+       
+        default:
+            return .green
+        }
+    }
+    
 }
 
